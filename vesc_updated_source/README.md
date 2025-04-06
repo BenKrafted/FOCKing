@@ -10,3 +10,8 @@ patch -p1 -d ./bldc-release_6_05 < vesc_foc_king20_bmi270.patch
 Explanation:
 -p1: Strips the first level of directory from the paths in the patch.
 -d dir_original: Changes to the directory where the patch should be applied.
+
+
+comment hyperspacex2: To patch on source use this command in top level of the source tree: 
+
+patch -p2 < vesc_foc_king20_bmi270.patch 
