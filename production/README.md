@@ -213,7 +213,9 @@ Increase the voltage to +24V and **set a current limit of 0.3A**.
 
 Connect to "FREE_DRIVE" in the Vesc Tool and go to the "Vesc Dev Tools" menu and type the command "help". This should give you a long list of available developer command line options.
 
-<img src="../images/Screenshot from 2024-01-20 16-49-27.png"  width="700" style="float:left; margin-right:10px;">
+<!-- <img src="../images/Screenshot from 2024-01-20 16-49-27.png"  width="700" style="float:left; margin-right:10px;"> -->
+
+![Screenshot from 2024-01-20 16-49-27](../images/Screenshot%20from%202024-01-20%2016-49-27.png)
 
 Scroll up til you find the "single_bridge_duty" command (a very helpful command currently only available for the FreeDrive firmware).
 Write the command:
@@ -241,7 +243,7 @@ If something looks or feels odd in this procedure, maybe you accidentally bridge
 
 If you open up the "Sampled Data" menu under "Data Analysis" and click on the "Sample Now" button, you should see something like this:
 
-<img src="../images/Screenshot from 2024-01-20 16-51-23.png"  width="600" style="float:left; margin-right:10px;">
+![Screenshot from 2024-01-20 16-51-23](../images/Screenshot%20from%202024-01-20%2016-51-23.png)
 
 All phase currents should be centered around zero.
 
@@ -249,19 +251,19 @@ If you lock a single phase for e.g. 20 seconds and do a current measurement duri
 ```
 single_bridge_duty 0 0.04 20
 ```
-<img src="../images/Screenshot from 2024-01-20 16-52-16.png"  width="600" style="float:left; margin-right:10px;">
+![Screenshot from 2024-01-20 16-52-16](../images/Screenshot%20from%202024-01-20%2016-52-16.png)
 
 Phase 2:
 ```
 single_bridge_duty 1 0.04 20
 ```
-<img src="../images/Screenshot from 2024-01-20 16-52-59.png"  width="600" style="float:left; margin-right:10px;">
+![Screenshot from 2024-01-20 16-52-59](../images/Screenshot%20from%202024-01-20%2016-52-59.png)
 
 Phase 3:
 ```
 single_bridge_duty 2 0.04 20
 ```
-<img src="../images/Screenshot from 2024-01-20 16-53-25.png"  width="600" style="float:left; margin-right:10px;">
+![Screenshot from 2024-01-20 16-53-25](../images/Screenshot%20from%202024-01-20%2016-53-25.png)
 
 ## Step 9: Finish assembly by adding large capacitors or more fets
 
@@ -283,3 +285,9 @@ When mounting and soldering the 330uF capacitors, remember that the three small 
 The FREEDRIVE is now assembled, and you can proceed to the normal procedure of "motor detection" in the VESC Tool.
 
 If you want to 3D print an enclosure for your drive, you can find the .obj-files in the /production folder.
+
+## Motor detection
+Once the assembly is complete, you can proceed with motor detection using the VESC Tool. Connect your motor to the FREEDRIVE and follow these steps:
+1. Open the VESC Tool and connect to your FREEDRIVE.
+2. Navigate to the "Motor" tab.
+3. Click on "Detect Motor" and follow the prompts to perform the motor detection process.
